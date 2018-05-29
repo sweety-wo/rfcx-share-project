@@ -1,0 +1,45 @@
+.footer-section {
+  color: #fff;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+  .main-content {
+    padding: 3rem !important;
+  }
+  .social-links {
+    a {
+      //padding: 1rem;
+      i {
+        padding: 1.5rem;
+       /* background-color: #333333;
+        border-radius: 50%;
+        height: 46px;
+        width: 46px;
+        padding: 14px;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.18);*/
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer-logo {
+    text-align: center;
+  }
+
+  .footer-section {
+
+    .main-content {
+      padding: 0.5rem !important;
+    }
+    .social-links {
+      a {
+        i {
+          padding: 0.5rem;
+        }
+      }
+    }
+  }
+}

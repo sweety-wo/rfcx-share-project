@@ -1,0 +1,67 @@
+<div class="main-section">
+  <div class="header-section m-0 ">
+    <app-navbar></app-navbar>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 header-content d-flex" *ngIf="isLink">
+          <div class="m-auto">
+            <h4 class="m-b-15px text-center">Hey, thanks for your help! Please help us get this
+              <a class="text-orange"
+                 [href]="url">{{url}}</a>
+              out!
+              <br>Please click all the buttons below:
+            </h4>
+
+            <div class="linkPreview col-md-8 mx-auto shadow-1">
+              <a class="card" *ngIf="linkData" [href]="linkData.url" target="_blank">
+
+                <div class="col-12">
+                  <div class="row p-3">
+                    <div class="col-md-4 m-auto">
+                      <img [src]="linkData.image" class="w-100">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-block">
+                        <h5 class="card-title"> {{linkData.title}}</h5>
+                        <p class="card-text">{{linkData.description}}</p>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </a>
+            </div>
+
+            <div class="col-sm-8 d-flex social-btns justify-content-between m-auto">
+              <button class="btn btn-facebook text-center st-custom-button shadow-1"
+                      data-network="facebook" [attr.data-url]="url">
+                <i class="fa fa-facebook fa-lg"></i><br>
+                Facebook
+              </button>
+              <button class="btn btn-twitter text-center st-custom-button shadow-1"
+                      data-network="twitter" [attr.data-url]="url">
+                <i class="fa fa-twitter fa-lg"></i><br>
+                Twitter
+              </button>
+              <button class="btn btn-linkedin text-center st-custom-button shadow-1"
+                      data-network="linkedin" [attr.data-url]="url">
+                <i class="fa fa-linkedin fa-lg"></i><br>
+                Linkedin
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 header-content d-flex" *ngIf="!isLink">
+          <div class="m-auto">
+            <h4 class="m-b-15px text-center">No link found.
+            </h4>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid footer-section">
+    <app-footer></app-footer>
+  </div>
+</div>
